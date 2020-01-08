@@ -1,25 +1,16 @@
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <title>Vex Doct - @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-
-    <!-- Load styles -->
     <link rel="stylesheet" type="text/css" href="/css/app.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-
-  
-  
 </head>
 <body class="language-php">
-
 <button onclick="scrolltop()" id="myBtn" title="Go to top"><i class="fa fa-arrow-circle-o-up" aria-hidden="true"></i></button>
     <div class="sidebar_layout" id="docsScreen">
-
         <div class="page_contain">
             <div class="contain">
                 <aside class="sidebar">
@@ -55,19 +46,16 @@
                     </div>
                 </aside>
                 <section class="body_content">
-                
                 <header class="docs_actions">
                         <div class="version_drop">
                             <div class="input_group">
-                                <label>Language</label>
+                                <label>@lang('book.text_9')</label>
                                  @foreach($language as $l )
                                    <a class="default-a {{ app()->getLocale() == $l->desc ? 'active' : '' }}" href="/lang/{{ $l->desc}}"><img class="img-language " src="/img/{{ $l->flag}}"></a>
                                  @endforeach
-                                <!-- </div> -->
-                            </div>
+                     </div>
                         </div>
                     </header>
-
                     <section class="docs_body">
                         <section class="docs_main">
                             <h3>{{ @$sub_menu->name  }}</h3>
@@ -88,22 +76,16 @@
                 </section>
             </div>
         </div>
-
     </div>
-
-    
-                       
-
-
 <footer>
     <div class="footer_contain" style="padding-top: 0;">
         <div class="contain">
             <section class="partner_block">
                 <div class="content">
-                    <h2>All Product Vexanium</h2>
-                    <p> Partners are elite shops providing top-notch  development and consulting. Each of our partners can help you craft a beautiful, well-architected project.</p>
+                    <h2 class="h2-forum">@lang('book.text_1')</h2>
+                    <p>@lang('book.text_2')</p>
                 </div>
-            <a href="https://club.vexanium.com/" class="btn" target="_blank"><span>Our Partners</span></a>
+            <a href="https://club.vexanium.com/" class="btn" target="_blank"><span>@lang('book.text_3') </span></a>
             </section>
         </div>
         <div class="footer_bg">
@@ -112,9 +94,8 @@
                 </div>
                 <div class="footer_content">
                     <div class="footer_nav">
-                       
                         <div class="nav_col">
-                            <span class="footer_nav_trigger">Wallet Download</span>
+                            <span class="footer_nav_trigger">@lang('book.text_4')</span>
                             <div class="footer_nav_contain">
                                 <ul>
                                     <li><a href="http://vexanium.com/files/vex_wallet_win.zip" target="_blank">Windows Wallet</a></li>
@@ -126,64 +107,53 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- <div class="nav_col">
-                            <span class="footer_nav_trigger">Local communities :</span>
+                        <div class="nav_col">
+                            <span class="footer_nav_trigger">@lang('book.text_5')</span>
                             <div class="footer_nav_contain">
                                 <ul>
-                                    <li><a href="http://vexanium.com/" target="_blank">Our Vision</a></li>
-                                    <li><a href="http://blog.vexanium.com/" target="_blank">Blog</a></li>
-                                    <li><a href="http://vexanium.com/#contact" target="_blank">Contact US</a></li>
-                                   
+                                    <li><a href="https://blog.vexanium.com/" target="_blank">blog.vexanium.com</a></li>
                                 </ul>
                             </div>
-                        </div> -->
+                        </div>
                         <div class="nav_col">
-                            <span class="footer_nav_trigger">Find Out More</span>
+                            <span class="footer_nav_trigger">@lang('book.text_6')</span>
                             <div class="footer_nav_contain">
                                 <ul>
-                                    <li><a href="http://www.vexanium.com/" target="_blank">vexanium.com</a></li>   
-                                    <li><a href="https://www.youtube.com/channel/UC39E4RaDoa45RZ4h6TEatwg" target="_blank">youtube.com</a></li>   
-                                    <li><a href="https://i.youku.com/vexanium" target="_blank">i.youku.com/</a></li>   
-                                    <li><a href="https://blog.vexanium.com/" target="_blank">blog.vexanium.com</a></li>   
-                                    <li><a href="https://t.me/vexaniuminfo" target="_blank">telegram</a></li>   
-                                    <li><a href="http://www.facebook.com/vexanium" target="_blank">facebook.com</a></li>   
-                                    <li><a href="http://www.twitter.com/vexanium" target="_blank">twitter.com/</a></li>   
-                                    <li><a href="http://www.instagram.com/vexanium" target="_blank">instagram.com</a></li>   
-                                    <li><a href="https://bitcointalk.org/index.php?topic=3282122.0" target="_blank">bitcointalk.org</a></li>   
-                                    <li><a href="https://www.reddit.com/r/Vexanium/" target="_blank">reddit.com</a></li>   
-                                    <li><a href="https://github.com/vexanium" target="_blank">github.com</a></li>  
-                                    <li><a href="https://discord.gg/bg3DYDG" target="_blank">discord.gg</a></li>  
-                                    <li><a href="https://www.weibo.com/u/7218464683?is_hot=1" target="_blank">www.weibo.com</a></li>  
-                                    <li><a href="https://mp.weixin.qq.com/s/3lgv-_lJzHxNzgKOec2Njw" target="_blank">mp.weixin.qq.com/</a></li>  
-
-
-                                    <!-- <li><a href="http://dev.vexanium.com/faq">FAQ</a></li> -->
+                                    <li><a href="https://club.vexanium.com" target="_blank">Club Vexanium</a></li>   
+                                    <li><a href="https://i.youku.com/vexanium" target="_blank">i.youku.com</a></li>   
+                                 <li><a href="https://bitcointalk.org/index.php?topic=3282122.0" target="_blank">bitcointalk.org</a></li>   
                     </ul>
                             </div>
                         </div>
                         <div class="nav_col">
-                            <span class="footer_nav_trigger">Local communities </span>
+                            <span class="footer_nav_trigger">@lang('book.text_7') </span>
                             <div class="footer_nav_contain">
                                 <ul>
-                                    <!-- <li><a href="https://club.vexanium.com/">Club</a></li> -->
-                                    <!-- <li><a href="https://club.vexanium.com/">Club</a></li> -->
                                     <li><a href="https://t.me/vexaniumcom" target="_blank">Vexanium official | English</a></li>
                                     <li><a href="https://t.me/vexaniumid" target="_blank">Vexanium Indonesia ( bahasa)</a></li>
                                     <li><a href="https://t.me/vexaniumvn" target="_blank">Vexanium Vietnam</a></li>
                                     <li><a href="https://t.me/vexaniumph" target="_blank">Vexanium Philippines</a></li>
                                     <li><a href="https://t.me/vexaniumcn" target="_blank">Vexanium CN 官方中文群</a></li>
                                     <li><a href="https://t.me/vexaniumkr" target="_blank">Vexanium Korea</a></li>
-
-                                    
-                                
-                               
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="footer_info">
-                    
-                    
+                    <span class="footer_nav_trigger">@lang('book.text_8')</span>
+                    <div class="footer_nav_contain">
+                    <a href="http://www.vexanium.com/" target="_blank"class="fonticon"><i class="fa fa-globe" aria-hidden="true"></i></a> 
+                    <a href="http://www.facebook.com/vexanium" target="_blank" class="fonticon"><i class="fa fa-facebook-square"></i></a>
+                    <a href="https://www.youtube.com/channel/UC39E4RaDoa45RZ4h6TEatwg" target="_blank" class="fonticon"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                    <a href="https://t.me/vexaniuminfo" target="_blank" class="fonticon"><i class="fa fa-telegram" aria-hidden="true"></i></a> 
+                    <a href="http://www.twitter.com/vexanium" target="_blank" class="fonticon"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+                    <a href="https://github.com/vexanium" target="_blank" class="fonticon"><i class="fa fa-github" aria-hidden="true"></i></a>
+                    <a href="https://www.reddit.com/r/Vexanium/" target="_blank" class="fonticon"><i class="fa fa-reddit" aria-hidden="true"></i></a>
+                    <a href="http://www.instagram.com/vexanium" target="_blank" class="fonticon"><i class="fa fa-instagram" aria-hidden="true"></i></a> 
+                    <a href="https://www.weibo.com/u/7218464683?is_hot=1" target="_blank" class="fonticon"><i class="fa fa-weibo" aria-hidden="true"></i></a>
+                    <a href="https://mp.weixin.qq.com/s/3lgv-_lJzHxNzgKOec2Njw" target="_blank" class="fonticon"><i class="fa fa-weixin" aria-hidden="true"></i></a>
+                    <a href="https://discord.gg/bg3DYDG" target="_blank"class="fonticon"><i class="fa fa-gg-circle" aria-hidden="true"></i></a>
+                    </div>
                     </div>
                 </div>
             </div>

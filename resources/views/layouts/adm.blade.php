@@ -88,7 +88,7 @@
     <!-- sidebar menu: : style can be found in sidebar.less -->
     <ul class="sidebar-menu" data-widget="tree">
       <li class="header">MAIN NAVIGATION</li>
-      <li <?php if(Request::segment(1) == 'dashboard' ){ echo 'class="active"';} ?> ><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span><span class="pull-right-container"></span></a></li>
+      <!-- <li <?php if(Request::segment(1) == 'dashboard' ){ echo 'class="active"';} ?> ><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span><span class="pull-right-container"></span></a></li> -->
       <li <?php if(Request::segment(1) == 'menu' ){ echo 'class="active"';} ?> ><a href="/menu"><i class="fa fa-fw fa-align-justify"></i> <span>Menu</span><span class="pull-right-container"></span></a></li>
       <li <?php if(Request::segment(1) == 'content' ){ echo 'class="active"';} ?> ><a href="/content"><i class="fa fa-fw fa-file"></i> <span>Content</span><span class="pull-right-container"></span></a></li>
       <li <?php if(Request::segment(1) == 'user' ){ echo 'class="active"';} ?> ><a href="/users"><i class="fa fa-fw fa-group"></i> <span>Users</span><span class="pull-right-container"></span></a></li>
